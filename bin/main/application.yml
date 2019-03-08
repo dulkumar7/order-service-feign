@@ -1,0 +1,15 @@
+feign:
+    hystrix:
+        enabled: true
+        
+hystrix:
+  threadpool:
+    default:
+      coreSize: 15
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 2000
